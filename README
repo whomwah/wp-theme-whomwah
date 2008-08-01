@@ -1,4 +1,14 @@
 A wordpress theme as used on http://whomwah.com
 
-No support
+
+Theme:   whomwah 
+Description:  A simple web layout as seen on whomwah.com.
+Version:      1.0
+Author:       Duncan Robertson
+Author URI:   http://whomwah.com/
+Tags:         blue, simple, fixed width, one column, widgets
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
 Not all templates have been changed, only the ones I used on my site
