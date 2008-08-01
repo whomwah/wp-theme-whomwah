@@ -1,0 +1,419 @@
+/*
+Theme Name: whomwah 
+Theme URI: http://whomwah.com/
+Description: A simple web layout as seen on whomwah.com.
+Version: 1.0
+Author: Duncan Robertson
+Author URI: http://whomwah.com/
+Tags: blue, simple, fixed width, one column, widgets
+
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+/* 
+-----------------------------------------------
+Reset Stylesheet
+Author: Eric Meyer
+ 
+Taken from:
+http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+----------------------------------------------- */
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ol, ul {
+  list-style: none;
+}
+ 
+ 
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+ 
+/* end of reset */
+
+/* Clearing Hack (http://www.positioniseverything.net/easyclearing.html)
+----------------------------------------------- */
+.cm:after
+{
+content: ".";
+display: block;
+height: 0;
+clear: both;
+visibility: hidden;
+}
+.cm {display: inline-table;}
+/* Hides from IE-mac \*/
+* html .cm {height: 1%;}
+.cm {display: block;}
+/* End hide from IE-mac */
+
+body {
+  min-width: 760px;
+  text-align: center;
+}
+
+blockquote {
+  font-size: 0.9em;
+  margin: 1em 3em;
+  color: #999;
+  border-left: 2px solid #999;
+  padding-left: 0.4em; 
+}
+
+object {
+  padding: 10px 0;
+}
+
+pre {
+  padding: 5px;
+  font-family: "bitstream", monaco, "lucida console", "courier new", courier, serif !important;
+  font-size: 12px;
+}
+
+p {
+  margin-bottom: 0.3em;
+}
+
+a { text-decoration: none; }
+a:link { color: #06C; }
+a:hover { color: blue; }
+a:visited { color: #86C; }
+
+hr { display: none; }
+
+#header {
+  padding-top: 0.7em;
+  margin-bottom: 1.7em;
+  font-size: 1.7em;
+  text-align: center;
+  color: #000;
+}
+
+#header h1 {
+  font-size: 2.5em;  
+  margin-bottom: 0.1em;
+}
+
+#header h1 a {
+  color: #06C;
+}
+
+#page {
+  font: 62.5% Georgia, serif;
+  color: #333;
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 64em;
+  text-align: left;
+  border-bottom: 3px solid #ccc;
+}
+
+#accessible-top, #accessible-bottom {
+  font-family: Arial;
+}
+
+#accessible-top a, #accessible-bottom a { 
+  display: block;
+  padding: 0.4em;
+  background: #ccc;  
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+#accessible-top a { 
+  border-bottom: 3px solid #fff;
+  border-bottom: 3px solid #eee;
+}
+
+#accessible-top a:hover, #accessible-bottom a:hover { 
+  background: #333;  
+}
+
+#accessible-top a:hover { 
+  border-bottom: 3px solid #666;
+}
+
+.status_code {
+  color: red;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.post {
+  font-size: 1.6em;
+  line-height: 1.4em;
+  margin-bottom: 2em;
+}
+
+.post h2, .post h3 {
+  font-size: 1.4em;
+  margin-bottom: 0em;
+  color: #000;
+}
+
+.post small, small.commentmetadata {
+  font-size: 0.8em;
+  font-style: italic;
+  color: #666;
+}
+
+h2.pagetitle {
+  font-size: 1.4em;
+  margin-bottom: 0em;
+  color: #000;
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 1em;
+  padding-bottom: 0.4em;
+}
+
+small span {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.post .entry {
+  padding-top: 0.6em;
+}
+
+.post .postmetadata {
+  font-size: 0.8em;
+}
+
+.post .postmetadata a {
+  text-transform: lowercase;
+}
+
+.post .altpostmetadata {
+  padding-top: 1em;
+  line-height: 1.3em; 
+}
+
+.post ul, .post ol {
+  margin-left: 2em;
+  padding: 1em;
+}
+
+.post ul {
+  list-style: circle;
+}
+
+.post ol {
+  list-style: decimal;
+}
+
+.post .entry img {
+  display: block;
+  margin: 1em;
+}
+
+div.navigation {
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+div.navigation a {
+  color: #06C;
+}
+
+div.navigation .alignleft {
+  float: left;
+}
+
+div.navigation .alignright {
+  text-align: right;
+}
+
+/* style the extras */
+
+#extras {
+  font-size: 1.2em;
+  border-top: 3px solid #ccc;
+  padding: 3em 0;
+}
+
+#extras ul ul, #search div {
+  margin-bottom: 0.7em;
+}
+
+#extras #search #s {
+  width: 30em;
+}
+
+#extras ul ul {
+  float:left;
+}
+
+#extras ul li {
+  clear: left;
+}
+
+#extras ul li h2, #search label {
+  font-size: 1.2em;
+  color: #000;
+  margin-bottom: 0.3em;
+}
+
+#search label {
+  display:block;
+}
+
+#extras ul li ul li {
+  display: block;
+  margin-right: 0.5em;
+  margin-bottom: 0.2em;
+  clear: none;
+  float: left;
+}
+
+#footer {
+  clear: both;
+  padding: 1em 0;
+}
+
+#footer p {
+  margin-bottom: 0.3em;
+}
+
+#comments {
+  font-size: 1.8em;
+  color: #000;
+  margin-bottom: 1.2em;
+}
+
+ol.commentlist {
+  font-size: 1.4em;
+  color:#333;
+}
+
+ol.commentlist li {
+  display: block;
+  margin-bottom: 1.4em;
+}
+
+ol.commentlist li cite {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+ol.commentlist li img {
+  position: relative;
+  top: 1px;
+  margin-right: 0.4em;
+}
+
+
+ol.commentlist li p {
+  padding-top: 0.4em;
+  line-height: 1.4em;
+}
+
+.commentmetadata {
+  color:#ccc;
+}
+.commentmetadata span {
+  font-size: 1.4em;
+}
+
+#respond {
+  border-top: 3px solid #ccc;
+  padding-top: 1.2em;
+  font-size: 1.6em;
+  color: #000;
+  margin-bottom: 1.2em;
+}
+
+form#commentform {
+  margin-bottom:2.8em;
+}
+
+form#commentform p {
+  font-size: 1.4em;
+  margin-bottom:0.8em;
+}
+
+form#commentform label {
+  font-size: 0.9em;
+}
+
+form#commentform label span {
+  font-size: 0.9em;
+  color: #000;
+}
+
+form#commentform textarea {
+  width: 50em;
+}
+
+input#author, input#email, input#url  {
+  margin-right: 0.5em;
+}
+
+#tags_allowed small {
+  font-style: italic;
+}
+
+#tags_allowed code {
+  padding-top: 0.4em;
+  display: block;
+  font-style: normal;
+  font-size: 0.8em;
+  font-family: "bitstream", monaco, "lucida console", "courier new", courier, serif !important;
+}
+
