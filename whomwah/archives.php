@@ -8,17 +8,16 @@ Template Name: Archives
 
 <div id="content" class="widecolumn">
 
-<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+  <div id="archive">
 
-<h2>Archives by Month:</h2>
-	<ul>
-		<?php wp_get_archives('type=monthly'); ?>
+  <?php include (TEMPLATEPATH . '/searchform.php'); ?>
+
+  <h2>Archives by Month:</h2>
+	<ul class="cm">
+		<?php wp_get_archives('type=monthly&show_post_count=true'); ?>
 	</ul>
 
-<h2>Archives by Subject:</h2>
-	<ul>
-		 <?php wp_list_categories(); ?>
-	</ul>
+  </div>
 
 </div>
 

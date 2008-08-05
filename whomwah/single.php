@@ -27,12 +27,11 @@
 
 						<?php } elseif (('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
 							// Comments are open, Pings are not ?>
-							You can skip to the end and leave a response. Pinging is currently not allowed.
+							It would be nice to read your comments below. Pinging is currently not allowed.
 
 						<?php } elseif (!('open' == $post-> comment_status) && !('open' == $post->ping_status)) {
 							// Neither Comments, nor Pings are open ?>
 							Both comments and pings are currently closed.
-
 			      <?php }; ?>
 
 					</small>

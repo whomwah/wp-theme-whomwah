@@ -100,7 +100,12 @@ visibility: hidden;
 .cm {display: block;}
 /* End hide from IE-mac */
 
+/* end of clearing hack */
+
+
 body {
+  font: 62.5% Georgia, serif;
+  color: #333;
   min-width: 760px;
   text-align: center;
 }
@@ -124,7 +129,11 @@ pre {
 }
 
 p {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.4em;
+}
+
+em {
+  font-style: italic;
 }
 
 a { text-decoration: none; }
@@ -133,6 +142,12 @@ a:hover { color: blue; }
 a:visited { color: #86C; }
 
 hr { display: none; }
+
+h2, h3, #archive form label {
+  font-size: 1.4em;
+  margin-bottom: 0em;
+  color: #000;
+}
 
 #header {
   padding-top: 0.7em;
@@ -151,11 +166,6 @@ hr { display: none; }
   color: #06C;
 }
 
-#page {
-  font: 62.5% Georgia, serif;
-  color: #333;
-}
-
 #content {
   margin-left: auto;
   margin-right: auto;
@@ -165,7 +175,7 @@ hr { display: none; }
 }
 
 #accessible-top, #accessible-bottom {
-  font-family: Arial;
+  font-family: Helvetica, Arial;
 }
 
 #accessible-top a, #accessible-bottom a { 
@@ -177,7 +187,6 @@ hr { display: none; }
 }
 
 #accessible-top a { 
-  border-bottom: 3px solid #fff;
   border-bottom: 3px solid #eee;
 }
 
@@ -202,11 +211,6 @@ hr { display: none; }
   margin-bottom: 2em;
 }
 
-.post h2, .post h3 {
-  font-size: 1.4em;
-  margin-bottom: 0em;
-  color: #000;
-}
 
 .post small, small.commentmetadata {
   font-size: 0.8em;
@@ -398,11 +402,16 @@ form#commentform label span {
 }
 
 form#commentform textarea {
-  width: 50em;
+  width: 400px;
 }
 
-input#author, input#email, input#url  {
+input#cname, input#cemail, input#curl, textarea#ccomment  {
   margin-right: 0.5em;
+}
+
+label.error {
+  font-style: italic;
+  color: red;
 }
 
 #tags_allowed small {
@@ -417,3 +426,22 @@ input#author, input#email, input#url  {
   font-family: "bitstream", monaco, "lucida console", "courier new", courier, serif !important;
 }
 
+#archive {
+  font-size: 1.4em;
+}
+
+#archive li {
+  display: block;
+  float:left;
+  margin-bottom: 0.5em;
+  margin-right: 0.3em;
+}
+
+#archive form {
+  margin-bottom: 1.2em;
+}
+
+#archive h2, #archive form label {
+  display: block;
+  margin-bottom: 0.4em;
+}

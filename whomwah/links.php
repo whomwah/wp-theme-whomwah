@@ -8,10 +8,13 @@ Template Name: Links
 
 <div id="content" class="widecolumn">
 
-<h2>Links:</h2>
-<ul>
-<?php wp_list_bookmarks(); ?>
-</ul>
+  <div id="archive"
+
+    <ul class="cm">
+    <?php wp_list_bookmarks(); ?>
+    </ul>
+
+  </div>
 
 </div>
 

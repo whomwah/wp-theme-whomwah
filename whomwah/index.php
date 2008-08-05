@@ -8,7 +8,7 @@
 
 			<div class="post" id="post-<?php the_ID(); ?>">
 				<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				<small>posted by <?php the_author() ?> at <span><?php the_time() ?></span> on <span><?php the_time('F j S, Y') ?></span></small>
+				<small>posted by <?php the_author() ?> at <span><?php the_time() ?></span> on <span><?php the_time('F jS, Y') ?></span></small>
 
 				<div class="entry">
 					<?php the_content('Read the rest of this entry &raquo;'); ?>

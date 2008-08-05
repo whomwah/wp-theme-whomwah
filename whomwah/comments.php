@@ -63,7 +63,7 @@
 <p>You must be <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">logged in</a> to post a comment.</p>
 <?php else : ?>
 
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="cmxform">
 
 <?php if ( $user_ID ) : ?>
 
@@ -71,20 +71,20 @@
 
 <?php else : ?>
 
-<p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="author"><small>Name <?php if ($req) echo "( <span>required</span> )"; ?></small></label></p>
+<p><input type="text" name="author" id="cname" class="required" minlength="2" value="<?php echo $comment_author; ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> />
+<label for="cname"><small>Name <?php if ($req) echo "( <span>required</span> )"; ?></small></label></p>
 
-<p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
-<label for="email"><small>Email Address ( <span>it will never be published<?php if ($req) echo " ... but is required</span> )"; ?></small></label></p>
+<p><input type="text" name="email" id="cemail" class="required email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> />
+<label for="cemail"><small>Email Address ( <span>Required, but will never be published</span> )</small></label></p>
 
-<p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-<label for="url"><small>Website</small></label></p>
+<p><input type="text" name="url" id="curl" class="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+<label for="curl"><small>Website</small></label></p>
 
 <?php endif; ?>
 
 <p id="tags_allowed"><small>You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>
 
-<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+<p><textarea name="comment" id="ccomment" class="required" cols="100%" rows="10" tabindex="4"></textarea></p>
 
 <p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
