@@ -1,0 +1,10 @@
+Installing the Whomwah theme
+----------------------------
+
+1. Download the theme archive and extract the files it contains. You will 
+need to preserve the directory structure in the archive when extracting.
+
+2. Move the whomwah folder into your wp-content/themes directory provided 
+by WordPress. For example, a theme named Test should be in wp-content/themes/test.
+
+3. Activate your theme throught the wordpress admin interface.
